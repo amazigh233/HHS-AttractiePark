@@ -1,15 +1,17 @@
 package AttractiePark;
 
+import Bezoeker.BezoekerList;
+
 public class AttractiePark {
     private static AttractiePark singleTon = null;
     private String naam;
-    private boolean isVol;
     private int maxPersonen;
+    private BezoekerList bezoekerList;
 
     private AttractiePark() {
         this.naam = "HHS-AttractiePark";
-        this.isVol = false;
-        this.maxPersonen = 20;
+        this.maxPersonen = 5;
+        this.bezoekerList = new BezoekerList();
         System.out.println("rt");
     }
 
@@ -17,9 +19,7 @@ public class AttractiePark {
         return naam;
     }
 
-    public boolean isVol() {
-        return isVol;
-    }
+
 
     public int getMaxPersonen() {
         return maxPersonen;
@@ -30,6 +30,14 @@ public class AttractiePark {
             singleTon = new AttractiePark();
         }
         return singleTon;
+    }
+
+    public String checkIfVol() {
+        String msg ="niet vol";
+        if(this.bezoekerList.getBezoekers().size() >= maxPersonen) {
+            msg = "vol";
+        }
+        return msg;
     }
 
 
