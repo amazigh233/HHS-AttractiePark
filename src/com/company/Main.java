@@ -17,8 +17,6 @@ public class  Main {
         //System.out.println(bezoekerList.getBezoekersMemberType() +  " " + bezoekerList.getBezoekersNaam());
         AttractiePark attractiePark = AttractiePark.getInstance();
         Attractie attractie = new Attractie("golath", 20);
-        //System.out.println(attractiePark.checkIfVol());
         //System.out.println(attractie.checkEntranceVolwassen() + " " + attractie.checkEntranceKinderen());
-
-    }
+}
 }
