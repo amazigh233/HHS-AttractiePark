@@ -23,6 +23,7 @@ public class Attractie {
     }
 
     public boolean checkEntranceVolwassen() {
+
         return this.entrance.getCheckEntranceAttractieVolwassen().checkEntrance(this.entrance.getInput().enterAge(),this.entrance.getInput().enterHeight());
     }
 
