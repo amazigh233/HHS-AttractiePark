@@ -18,14 +18,7 @@ public class Attractie {
         return naam;
     }
 
-    public boolean checkEntranceKinderen() {
-        return this.entrance.getGetCheckEntranceAttractieKinderen().checkEntrance(this.entrance.getInput().enterAge(),this.entrance.getInput().enterHeight());
-    }
 
-    public boolean checkEntranceVolwassen() {
-
-        return this.entrance.getCheckEntranceAttractieVolwassen().checkEntrance(this.entrance.getInput().enterAge(),this.entrance.getInput().enterHeight());
-    }
 
     public Integer getAantalZitplaatsen() {
         return aantalZitplaatsen;

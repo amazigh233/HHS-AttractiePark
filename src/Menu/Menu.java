@@ -1,54 +1,147 @@
 package Menu;
 
-import Attractie.Attractie;
+import Attractie.AttractieList;
+import Attractie.Entrance;
+import AttractiePark.AttractiePark;
+import Bezoeker.BezoekerList;
 import org.w3c.dom.Attr;
 
 import java.util.Scanner;
 
 public class Menu {
-    private Attractie attractie;
-    public Scanner scanner =new Scanner(System.in);
+
+    private MenuMessage menuMessage;
+    private BezoekerList bezoekerList;
+    private AttractieList attractieList;
+    private AttractiePark attractiePark;
+    private Entrance entrance;
+    private int keuze;
 
     public Menu() {
-        this.attractie = new Attractie("bilal",4);
+        this.menuMessage = new MenuMessage();
+        this.bezoekerList = new BezoekerList();
+        this.entrance = new Entrance();
+        this.attractieList = new AttractieList();
+        this.attractiePark = AttractiePark.getInstance();
+        this.keuze = keuze;
     }
 
-    public int intro() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Welkom, kies waar u controle over wilt hebben");
-        System.out.println("1. Volwassen-attractie");
-        System.out.println("2. kinder Attractie");
-        int keuze = scanner.nextInt();
+    private int getKeuze() {
+        return  this.keuze;
+    }
 
+    public int keuze() {
+        Scanner scanner = new Scanner(System.in);
+        this.keuze = scanner.nextInt();
         return keuze;
     }
 
-    public void volwassenMenu() {
-        System.out.println("1. check entrance voor volwassenen");
-        System.out.println("2. Toon alle  namen van volwassen attracties");
-        System.out.println("3. Add bezoeker");
-        System.out.println("4. Toon aantal volwassen attracties");
-        System.out.println("5. Toon aantal toegevoegde namen");
 
 
+    public void keuzenOne() {
+        if(getKeuze() == 1) {
+            System.out.println("voer uw leeftijd en lengte in");
+            System.out.println(this.entrance.getCheckEntranceAttractieVolwassen().checkEntrance(this.entrance.getInput().enterAge(),this.entrance.getInput().enterHeight()));
+        }
+        else if(getKeuze() == 2) {
+            System.out.println(this.entrance.getGetCheckEntranceAttractieKinderen().checkEntrance(30,190));
+        }
     }
-    public void werkNemerMenu() {
-        if(intro() == 1) {
-            this.volwassenMenu();
-            int keuze = scanner.nextInt();
-            if(keuze == 1) {
-                System.out.println(this.attractie.checkEntranceVolwassen());
+    public void keuzenTwo() {
+        if(getKeuze() == 3) {
+            System.out.println(this.bezoekerList.toString());
+        }
+        if(getKeuze() == 4) {
+            System.out.println(this.attractieList.toString());
+        }
+        if(getKeuze() == 5) {
+            System.out.println(this.attractieList.toString());
+        }
+    }
+    public void menu() {
+        //this.menuMessage.introMessage();
+
+
+        do {
+            this.menuMessage.introMessage();
+
+
+            this.keuze();
+
+            this.keuzenOne();
+            this.keuzenTwo();
+        }while (getKeuze() !=0);
+    }
+
+
+
+
+}
+
+
+/*
+*
+    public void menu() {
+        Scanner scanner = new Scanner(System.in);
+        this.menuMessage.introMessage();
+        int keuzen;
+
+        do {
+            this.menuMessage.introMessage();
+
+            keuzen = scanner.nextInt();
+            if(keuzen == 1) {
+                System.out.println("voer uw leeftijd en lengte in");
+                System.out.println(this.entrance.getCheckEntranceAttractieVolwassen().checkEntrance(this.entrance.getInput().enterAge(),this.entrance.getInput().enterHeight()));
+            }else if(keuzen == 2) {
+                System.out.println(this.entrance.getGetCheckEntranceAttractieKinderen().checkEntrance(30,190));
+
+            }else if(keuzen == 3) {
+                System.out.println("Alle bezoekers op een rij");
+                System.out.println(this.bezoekerList.toString());
+            } else if(keuzen == 4) {
+                System.out.println(this.attractiePark.checkIfVol());
+            }else if(keuzen == 5) {
+                System.out.println(this.attractieList.toString());
             }
-        }else if(intro() ==2) {
-            this.kinderenMenu();
+        }
+        while (keuzen!=0);
+    }
+*
+* */
+
+
+/*
+*   public void keuzenOne() {
+        if(keuze() == 1) {
+            System.out.println("voer uw leeftijd en lengte in");
+            System.out.println(this.entrance.getCheckEntranceAttractieVolwassen().checkEntrance(this.entrance.getInput().enterAge(),this.entrance.getInput().enterHeight()));
+        }
+        if(keuze() == 2) {
+            System.out.println(this.entrance.getGetCheckEntranceAttractieKinderen().checkEntrance(30,190));
+        }
+    }
+    public void keuzenTwo() {
+        if(keuze() == 3) {
+            System.out.println(this.bezoekerList.toString());
+        }
+        if(keuze() == 4) {
+            System.out.println(this.attractieList.toString());
+        }
+        if(keuze() == 5) {
+            System.out.println(this.attractieList.toString());
         }
     }
 
-    public void kinderenMenu() {
-        System.out.println("1. check entrance voor kinderen");
-        System.out.println("2. Toon alle  namen van kinder attracties");
-        System.out.println("3. Add bezoeker");
-        System.out.println("4. Toon aantal kinder attracties");
-        System.out.println("5. Toon aantal toegevoegde namen");
+
+
+    public void menu() {
+        this.menuMessage.introMessage();
+        do {
+            this.menuMessage.introMessage();
+            this.keuzenOne();
+            this.keuzenTwo();
+
+        }while(keuze() !=0);
     }
-}
+* */

@@ -1,6 +1,7 @@
 package com.company;
 
-import Attractie.Attractie;
+import Attractie.Entrance;
+import Attractie.AttractieList;
 import AttractiePark.AttractiePark;
 import Bezoeker.Bezoeker;
 import Bezoeker.NormaleBezoeker;
@@ -15,7 +16,13 @@ public class  Main {
     public static void main(String[] args) {
 	// write your code here
         Menu menu = new Menu();
-        System.out.println(menu.intro());
-        menu.werkNemerMenu();
+       //ystem.out.println(menu.intro());
+        //menu.werkNemerMenu();
+        //AttractieList attractieList = new AttractieList();
+        //attractieList.addAttracties();
+        //System.out.println(attractieList.totaalAantalAttracties());
+        //menu.intro();
+       // AttractiePark attractiePark = AttractiePark.getInstance();
+        menu.menu();
     }
 }

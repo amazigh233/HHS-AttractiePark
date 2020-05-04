@@ -1,5 +1,7 @@
 package Attractie;
 
+import Input.Input;
+
 public class Entrance {
     private CheckEntranceAttractie checkEntranceAttractieVolwassen;
     private CheckEntranceAttractie getCheckEntranceAttractieKinderen;
@@ -22,4 +24,6 @@ public class Entrance {
     public CheckEntranceAttractie getGetCheckEntranceAttractieKinderen() {
         return this.getCheckEntranceAttractieKinderen;
     }
+
+
 }

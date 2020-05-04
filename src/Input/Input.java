@@ -1,4 +1,4 @@
-package Attractie;
+package Input;
 
 import java.util.Scanner;
 

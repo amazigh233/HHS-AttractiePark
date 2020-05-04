@@ -12,7 +12,6 @@ public class AttractiePark {
         this.naam = "HHS-AttractiePark";
         this.maxPersonen = 5;
         this.bezoekerList = new BezoekerList();
-        System.out.println("rt");
     }
 
     public String getNaam() {

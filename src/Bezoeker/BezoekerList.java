@@ -9,9 +9,8 @@ public class BezoekerList {
     public BezoekerList() {
         this.bezoekers = new ArrayList<Bezoeker>();
         this.bezoekers.add(new NormaleBezoeker("bilal"));
-        this.bezoekers.add(new JaarlijksBezoeker("bilal"));
-        this.bezoekers.add(new LifeTimeBezoeker("bilal"));
-
+        this.bezoekers.add(new JaarlijksBezoeker("henk"));
+        this.bezoekers.add(new LifeTimeBezoeker("Jaap"));
     }
 
     public List<Bezoeker> getBezoekers() {
@@ -19,6 +18,7 @@ public class BezoekerList {
     }
 
     public String getBezoekersMemberType() {
+
         StringBuilder empty = new StringBuilder();
         for(Bezoeker b: this.bezoekers) {
             empty.append(b.soortMember() + " ");
@@ -26,7 +26,8 @@ public class BezoekerList {
         return empty.toString();
     }
 
-    public String getBezoekersNaam() {
+    public String getBezoersNamen() {
+
         StringBuilder empty = new StringBuilder();
         for(Bezoeker b: this.bezoekers) {
             empty.append(b.naam + " ");
@@ -36,8 +37,7 @@ public class BezoekerList {
 
     @Override
     public String toString() {
-        return "BezoekerList{" +
-                "bezoekers=" + bezoekers +
-                '}';
+        return "Bezoeker naam: " + this.getBezoersNamen() + "\n" +
+                "Soort member Type: " + this.getBezoekersMemberType();
     }
 }
