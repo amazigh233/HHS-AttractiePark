@@ -7,20 +7,11 @@ import java.util.List;
 
 public class AttractieList {
     private List<Attractie>attracties;
-    private Input input;
-
 
     public AttractieList() {
         this.attracties = new ArrayList<Attractie>();
         this.attracties.add(new VolwassenAttractie("Golath", 20, 5));
         this.attracties.add(new KinderAttractie("Hello kitty", 20, "Hello-Kitty"));
-        this.input = new Input();
-    }
-
-    public int totaalAantalAttracties() {
-        int holdAantal = this.attracties.size();
-
-        return holdAantal;
     }
 
     public String getAttractiesNamen() {

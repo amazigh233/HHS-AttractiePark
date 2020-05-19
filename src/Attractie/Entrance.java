@@ -4,26 +4,26 @@ import Input.Input;
 
 public class Entrance {
     private CheckEntranceAttractie checkEntranceAttractieVolwassen;
-    private CheckEntranceAttractie getCheckEntranceAttractieKinderen;
+    private CheckEntranceAttractie CheckEntranceAttractieKinderen;
     private Input input;
 
     public Entrance() {
         this.checkEntranceAttractieVolwassen = new CheckEntranceVolwassenen();
-        this.getCheckEntranceAttractieKinderen = new CheckEntranceKinderen();
+        this.CheckEntranceAttractieKinderen = new CheckEntranceKinderen();
         this.input = new Input();
     }
 
-    public CheckEntranceAttractie getCheckEntranceAttractieVolwassen() {
-        return this.checkEntranceAttractieVolwassen;
+    public boolean getCheckEntranceAttractieVolwassen() {
+        return this.checkEntranceAttractieVolwassen.checkEntrance(getInput().enterAge(), getInput().enterHeight());
     }
+
+    public boolean getGetCheckEntranceAttractieKinderen() {
+        return this.CheckEntranceAttractieKinderen.checkEntrance(getInput().enterAge(), getInput().enterHeight());
+    }
+
 
     public Input getInput() {
         return this.input;
     }
-
-    public CheckEntranceAttractie getGetCheckEntranceAttractieKinderen() {
-        return this.getCheckEntranceAttractieKinderen;
-    }
-
 
 }

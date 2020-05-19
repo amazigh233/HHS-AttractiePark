@@ -16,11 +16,10 @@ public class BezoekerList {
     public List<Bezoeker> getBezoekers() {
         return bezoekers;
     }
-
     public String getBezoekersMemberType() {
-
         StringBuilder empty = new StringBuilder();
         for(Bezoeker b: this.bezoekers) {
+
             empty.append(b.soortMember() + " ");
         }
         return empty.toString();
@@ -40,4 +39,12 @@ public class BezoekerList {
         return "Bezoeker naam: " + this.getBezoersNamen() + "\n" +
                 "Soort member Type: " + this.getBezoekersMemberType();
     }
+
+
+
+
 }
+
+
+
+

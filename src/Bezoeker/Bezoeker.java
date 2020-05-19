@@ -1,6 +1,7 @@
 package Bezoeker;
 
 public abstract class Bezoeker {
+    //liskov
     public String naam;
     public String memberType;
 
@@ -10,4 +11,6 @@ public abstract class Bezoeker {
     }
 
      public abstract String soortMember();
+
+
 }

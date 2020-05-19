@@ -1,27 +1,13 @@
 package AttractiePark;
 
-import Bezoeker.BezoekerList;
-
 public class AttractiePark {
     private static AttractiePark singleTon = null;
-    private String naam;
     private int maxPersonen;
-    private BezoekerList bezoekerList;
+    private int ticketPrice;
 
     private AttractiePark() {
-        this.naam = "HHS-AttractiePark";
-        this.maxPersonen = 5;
-        this.bezoekerList = new BezoekerList();
-    }
-
-    public String getNaam() {
-        return naam;
-    }
-
-
-
-    public int getMaxPersonen() {
-        return maxPersonen;
+        this.maxPersonen = 50;
+        this.ticketPrice = 30;
     }
 
     public static AttractiePark getInstance() {
@@ -31,12 +17,12 @@ public class AttractiePark {
         return singleTon;
     }
 
-    public String checkIfVol() {
-        String msg ="niet vol";
-        if(this.bezoekerList.getBezoekers().size() >= maxPersonen) {
-            msg = "vol";
-        }
-        return msg;
+    public int getTicketPrice() {
+        return ticketPrice;
+    }
+
+    public int getMaxPersonen() {
+        return maxPersonen;
     }
 
 
