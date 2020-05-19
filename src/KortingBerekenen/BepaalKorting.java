@@ -27,8 +27,7 @@ public class BepaalKorting {
 
     }
 
-    //long methodreplace method with object long parameter
-    // long method opgelost en switch case dmv extracht method
+    // switch statements opgelost dmv extracht method
     public int ComputePriceWithDiscountEdit() {
         int local = this.ticketPrice;
         local -= this.soortMember();//30-3 = 27

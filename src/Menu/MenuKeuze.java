@@ -3,6 +3,7 @@ package Menu;
 import Attractie.Entrance;
 
 public abstract class MenuKeuze {
+    //duplicate code opgelost dmv Pull Up Field
     private int nummer;
     private String omschrijving;
     private Entrance entrance;
@@ -20,6 +21,7 @@ public abstract class MenuKeuze {
     public Entrance getEntrance() {
         return entrance;
     }
+
 
     @Override
     public String toString() {

@@ -2,6 +2,7 @@ package Attractie;
 
 import Input.Input;
 
+// large class opgelost dmv exracht class
 public class Entrance {
     private CheckEntranceAttractie checkEntranceAttractieVolwassen;
     private CheckEntranceAttractie CheckEntranceAttractieKinderen;
