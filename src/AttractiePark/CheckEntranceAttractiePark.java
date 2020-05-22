@@ -5,8 +5,8 @@ import Bezoeker.BezoekerList;
 public class CheckEntranceAttractiePark {
 
     private BezoekerList bezoekerList = new BezoekerList();
-    private AttractiePark attractiePark;
 
+    private AttractiePark attractiePark;
 
     public CheckEntranceAttractiePark() {
         this.attractiePark = AttractiePark.getInstance();

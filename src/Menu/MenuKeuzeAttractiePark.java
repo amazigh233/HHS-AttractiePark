@@ -1,12 +1,11 @@
 package Menu;
 
-import AttractiePark.AttractiePark;
 import AttractiePark.CheckEntranceAttractiePark;
-import Input.Input;
+import Input.InputAttractiePark;
 
 public class MenuKeuzeAttractiePark extends MenuKeuze {
     private CheckEntranceAttractiePark attractiePark;
-    private Input input = new Input();
+    private InputAttractiePark input = new InputAttractiePark();
     public MenuKeuzeAttractiePark() {
         super(3, "check of bezoekers pretpark mogen betreden");
         this.attractiePark = new CheckEntranceAttractiePark();

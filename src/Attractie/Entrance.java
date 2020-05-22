@@ -1,17 +1,17 @@
 package Attractie;
 
-import Input.Input;
+import Input.InputAttractiePark;
 
 // large class opgelost dmv exracht class
 public class Entrance {
     private CheckEntranceAttractie checkEntranceAttractieVolwassen;
     private CheckEntranceAttractie CheckEntranceAttractieKinderen;
-    private Input input;
+    private InputAttractiePark input;
 
     public Entrance() {
         this.checkEntranceAttractieVolwassen = new CheckEntranceVolwassenen();
         this.CheckEntranceAttractieKinderen = new CheckEntranceKinderen();
-        this.input = new Input();
+        this.input = new InputAttractiePark();
     }
 
     public boolean getCheckEntranceAttractieVolwassen() {
@@ -23,7 +23,7 @@ public class Entrance {
     }
 
 
-    public Input getInput() {
+    public InputAttractiePark getInput() {
         return this.input;
     }
 

@@ -10,9 +10,6 @@ public class BepaalKorting {
     private int leeftijd;
     private int ticketPrice;
 
-    /**
-     *
-     */
     public BepaalKorting(String dagVanDeWeek, int keuzeSoortMember, int aantalKeerBezocht, int leeftijd) {
         //Primitive Obsession opgelost met Preserve Whole Object
         AttractiePark attractiePark = AttractiePark.getInstance();
@@ -24,7 +21,6 @@ public class BepaalKorting {
         //Preserve Whole Object
         this.ticketPrice = attractiePark.getTicketPrice();
 
-
     }
 
     // switch statements opgelost dmv extracht method
@@ -33,30 +29,24 @@ public class BepaalKorting {
         local -= this.soortMember();//30-3 = 27
         local -= this.bepaalKortingOpAantalKeerBezocht();
         local -= this.bepaalKortingOpLeeftijd();
-        local -= this.bepaalKortingOpWeekend();
-        local -= this.bepaalKortingOpMaandag();
+        local -= this.bepaalKortingOpDagen();
 
         return local;
     }
 
-    private int bepaalKortingOpMaandag() {
+    public int bepaalKortingOpDagen() {
         int discount = 0;
-
         if (dagVanDeWeek.equals("maandag")) {
             discount += 3;
+        }else  if (dagVanDeWeek.equals("zaterdag") || dagVanDeWeek.equals("zondag") || dagVanDeWeek.equals("woensdag")) {
+            discount  -= 5;
         }
 
         return discount;
 
     }
     //- is korting erbij optellen + is korting eraf halen
-    public int bepaalKortingOpWeekend() {
-        int discount = 0;
-        if (dagVanDeWeek.equals("zaterdag") || dagVanDeWeek.equals("zondag") || dagVanDeWeek.equals("woensdag")) {
-            discount  -= 5;
-        }
-        return discount;
-    }
+
     public int soortMember() {
         int discount = 0;
         if (this.keuzeSoortMember == 2) {

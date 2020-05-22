@@ -6,6 +6,7 @@ import java.util.List;
 public class BezoekerList {
     private List<Bezoeker>bezoekers;
 
+
     public BezoekerList() {
         this.bezoekers = new ArrayList<Bezoeker>();
         this.bezoekers.add(new NormaleBezoeker("bilal"));
@@ -26,7 +27,6 @@ public class BezoekerList {
     }
 
     public String getBezoersNamen() {
-
         StringBuilder empty = new StringBuilder();
         for(Bezoeker b: this.bezoekers) {
             empty.append(b.naam + " ");
