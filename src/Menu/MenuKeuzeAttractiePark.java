@@ -6,6 +6,7 @@ import Input.InputAttractiePark;
 public class MenuKeuzeAttractiePark extends MenuKeuze {
     private CheckEntranceAttractiePark attractiePark;
     private InputAttractiePark input = new InputAttractiePark();
+
     public MenuKeuzeAttractiePark() {
         super(3, "check of bezoekers pretpark mogen betreden");
         this.attractiePark = new CheckEntranceAttractiePark();

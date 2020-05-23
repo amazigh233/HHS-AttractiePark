@@ -1,7 +1,7 @@
 package Bezoeker;
 
 public abstract class Bezoeker {
-    //liskov
+    //liskov en pullup fields
     public String naam;
     public String memberType;
 

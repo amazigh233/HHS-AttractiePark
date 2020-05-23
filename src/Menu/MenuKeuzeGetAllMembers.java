@@ -3,15 +3,20 @@ package Menu;
 import Bezoeker.BezoekerList;
 
 public class MenuKeuzeGetAllMembers extends MenuKeuze {
-    BezoekerList bezoekerList = new BezoekerList();
+    //primitive datatype
+    private String getBezoekers;
 
     public MenuKeuzeGetAllMembers() {
         super(4, "alle bezoekers");
+        BezoekerList bezoekerList = new BezoekerList();
+
+        this.getBezoekers = bezoekerList.toString();
+
     }
 
     @Override
     public void start() {
-        System.out.println(this.bezoekerList.toString());
+        System.out.println(this.getBezoekers);
 
     }
 }

@@ -3,6 +3,7 @@ package Menu;
 import KortingBerekenen.BepaalTicketPrijs;
 
 public class MenuKeuzeKorting extends MenuKeuze {
+    //kan er geen primitive data type van maken aangezien het een class laadt.
     BepaalTicketPrijs bepaalTicketPrijs = new BepaalTicketPrijs();
 
     public MenuKeuzeKorting() {
